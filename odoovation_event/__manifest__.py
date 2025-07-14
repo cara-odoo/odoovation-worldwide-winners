@@ -11,5 +11,8 @@
     "license": "OPL-1",
     "depends": ["website_event", "hr"],
     "data": [
-        'views/event_event_views.xml'],
+        'security/ir.model.access.csv',
+        'views/event_event_views.xml',
+        'views/hr_employee_views.xml'
+    ],
 }
