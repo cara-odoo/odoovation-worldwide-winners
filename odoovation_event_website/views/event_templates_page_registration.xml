@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="odoovation_event_website.event_description_full" inherit_id="website_event.event_description_full">
+        <xpath expr="//div[@id='o_wevent_event_main_col']" position="inside">
+            <form t-attf-action="/event/{{ event.id }}/registration_lunch/new" method="post">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <t t-foreach="event.event_ticket_ids" t-as="ticket">
+                    <div class="form-check">
+                        <input class="form-check-input big-checkbox" type="checkbox" t-att-name="ticket.name" t-att-value="ticket.id" t-att-id="ticket.id"/>
+                        <label class="form-check-label" t-att-for="ticket.id"><t t-esc="ticket.name"/></label>
+                        <div>
+                            <p t-esc="ticket.product_id.name"/>
+                            <p t-esc="ticket.product_id.description"/>
+                        </div>
+                    </div>
+                </t>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </xpath>
+    </template>
+</odoo>
