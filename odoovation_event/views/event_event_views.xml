@@ -19,6 +19,17 @@
             <xpath expr="//page[@name='tickets']" position="attributes">
                 <attribute name="string">Menu Information</attribute>
             </xpath>
+            <xpath expr="//header//field[@name='stage_id']" position="before">
+                <button 
+                    name="action_send_registration_remainder"
+                    type="object" class="btn btn-primarys">
+                    Send Registration Remainder
+                </button>
+            </xpath>
+            <xpath expr="//page[@name='event_communication']//field[@name='interval_type']" position="after">
+                <field name="send_registration_remainder">
+                </field>
+            </xpath>
         </field>
     </record>
 </odoo>
