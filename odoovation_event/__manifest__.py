@@ -9,7 +9,7 @@
     "maintainer": "Odoo Development Services",
     "website": "https://www.odoo.com",
     "license": "OPL-1",
-    "depends": ["website_event", "hr"],
+    "depends": ["website_sale","website_event","stock","hr"],
     "data": [
         'security/ir.model.access.csv',
         'views/event_event_views.xml',
