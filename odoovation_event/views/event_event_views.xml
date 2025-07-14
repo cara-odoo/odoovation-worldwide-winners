@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_event_form_inherit_odoovation" model="ir.ui.view">
+        <field name="name">event.event.form.inherit.odoovation</field>
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="replace">
+                <div class="oe_title">
+                    <label for="name" string="Menu Name"/>
+                    <h1><field class="text-break" options="{'line_breaks': False}" widget="text" name="name" placeholder="e.g. Week of 7/14 - 7/18.."/></h1>
+                </div>
+            </xpath>
+            <xpath expr="//group[@name='right_event_details']" position="replace">
+                <group name="right_event_details">
+                    <field name="badge_format"/>
+                    <field name="badge_image"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='tickets']" position="attributes">
+                <attribute name="string">Menu Information</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
