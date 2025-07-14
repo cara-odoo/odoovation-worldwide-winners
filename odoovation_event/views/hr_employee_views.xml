@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_dietary_restrictions" model="ir.ui.view">
+        <field name="name">view_dietary_restrictions</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='work_location_id']" position="after">
+                <field name="dietary_restriction_ids" widget="many2many_tags" placeholder="Select dietary restrictions..."/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
