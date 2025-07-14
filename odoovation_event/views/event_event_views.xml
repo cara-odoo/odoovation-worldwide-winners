@@ -26,6 +26,10 @@
                     Send Registration Remainder
                 </button>
             </xpath>
+            <xpath expr="//page[@name='event_communication']//field[@name='interval_type']" position="after">
+                <field name="send_registration_remainder">
+                </field>
+            </xpath>
         </field>
     </record>
 </odoo>
