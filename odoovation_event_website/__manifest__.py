@@ -15,13 +15,6 @@
     'data': [
         'views/event_templates_page_registration.xml'
     ],
-    # 'assets': {
-    #     'web.assets_backend': [
-    #         'sas_stock/static/src/**/*.scss',
-    #         'sas_stock/static/src/**/*.js',
-    #         'sas_stock/static/src/**/*.xml',
-    #     ]
-    # },
     'installable': True,
     'application': False,
     'auto_install': False,
