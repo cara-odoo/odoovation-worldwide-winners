@@ -1,6 +1,16 @@
-from odoo import fields, models
+from odoo import models, api
 
 
+class EventTicket(models.Model):
+    _inherit = "event.event.ticket"
+
+    @api.model
+    def default_get(self, fields):
+        # Override so it does not automatically fill with registration information
+        res =  super(EventTicket, self).default_get(fields)
+        if res.get('name'):
+            res['name'] = ''
+        return res
 class EventEvent(models.Model):
     _inherit = 'event.event'
     _description = 'Lunch Menus'
